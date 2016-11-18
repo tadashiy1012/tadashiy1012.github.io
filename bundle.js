@@ -275,21 +275,28 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var titleStyle = { fontSize: '22px', display: 'inline' };
+
 var CardTitle = function CardTitle(_ref) {
   var icon = _ref.icon,
       text = _ref.text;
   return _react2.default.createElement(
     'div',
-    { className: 'valign-wrapper', style: { height: '40px' } },
+    null,
+    _react2.default.createElement('div', { className: 'hide-on-small-only', style: { marginBottom: '44px' } }),
     _react2.default.createElement(
-      'i',
-      { className: 'valign medium material-icons' },
-      icon
-    ),
-    _react2.default.createElement(
-      'h3',
-      { className: 'valign', style: { fontSize: '22px', width: '70px', display: 'inline' } },
-      text
+      'div',
+      { className: 'valign-wrapper' },
+      _react2.default.createElement(
+        'i',
+        { className: 'valign medium material-icons' },
+        icon
+      ),
+      _react2.default.createElement(
+        'h3',
+        { className: 'valign', style: titleStyle },
+        text
+      )
     )
   );
 };
@@ -317,8 +324,7 @@ var Card = function (_React$Component) {
           { className: 'row' },
           _react2.default.createElement(
             'div',
-            { className: 'col s12 m4 l3' },
-            _react2.default.createElement('div', { className: 'hide-on-small-only', style: { marginBottom: '44px' } }),
+            { className: 'col s12 m4 l3', style: { display: 'flex', justifyContent: 'center' } },
             _react2.default.createElement(CardTitle, { icon: this.props.icon, text: this.props.title })
           ),
           _react2.default.createElement(
