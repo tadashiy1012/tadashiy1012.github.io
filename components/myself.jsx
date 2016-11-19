@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './card.jsx';
+import Sp from './sp.jsx';
 
 export default class MySelf extends React.Component {
   constructor(props) {
@@ -30,6 +31,7 @@ export default class MySelf extends React.Component {
             <li>2016/2 株式会社ナックウェブ退社</li>
           </ul>
         </div>
+        <Sp />
       </div>
     )
   }
