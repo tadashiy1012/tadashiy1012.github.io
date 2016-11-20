@@ -12,6 +12,8 @@ const CardTitle = ({icon, text}) => (
   </div>
 );
 
+const leftStyle = {display: 'flex', justifyContent: 'center'};
+
 export default class Card extends React.Component {
   constructor(props) {
     super(props);
@@ -21,7 +23,7 @@ export default class Card extends React.Component {
     return (
       <div className="card-panel">
         <div className="row">
-          <div className="col s12 m3 l3" style={{display: 'flex', justifyContent: 'center'}}>
+          <div className="col s12 m3 l3" style={leftStyle}>
             <CardTitle icon={this.props.icon} text={this.props.title} />
           </div>
           <div className="col s12 m9 l9">
